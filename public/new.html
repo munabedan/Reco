@@ -29,13 +29,13 @@
 
     <!-- Template Main CSS File -->
     <link href="assets/css/style.css" rel="stylesheet">
+    <script type="text/javascript" src="/eel.js"></script>
+    <!-- First, include the Webcam.js JavaScript Library -->
+    <script type="text/javascript" src="/webcam.min.js"></script>
 
-    <!-- =======================================================
-  * Template Name: FlexStart - v1.2.0
-  * Template URL: https://bootstrapmade.com/flexstart-bootstrap-startup-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+     <!--=======================================================* Template Name: FlexStart - v1.2.0 * Template URL:
+        https://bootstrapmade.com/flexstart-bootstrap-startup-template/ * Author: BootstrapMade.com * License:
+        https://bootstrapmade.com/license/========================================================-->
 </head>
 
 <body>
@@ -69,58 +69,81 @@
         <!-- ======= Contact Section ======= -->
         <section id="contact" class="contact">
 
-            <div class="container" data-aos="fade-up">
+            <div data-aos="fade-up">
 
                 <header class="section-header">
                     <p>Register New User</p>
                 </header>
 
-                <div class="row gy-4">
 
-                    <div class="col-lg-6 info-box" id="dropImage" ondrop="drop(event)" ondragover="allowDrop(event)">
 
-                      <p>Drag and drop Photo here...</p>
+                <div class="container">
 
-                    </div>
 
-                    <div class="col-lg-6">
-                        <form action="forms/contact.php" method="post" class="php-email-form">
-                            <div class="row gy-4">
+                    <form  class="php-email-form" onsubmit="submitUser(event)">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-8 border">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-md-6 mt-1" id="my_camera">
 
-                                <div class="col-md-6">
-                                    <input type="text" name="name" class="form-control" placeholder="Your Name"
-                                        required>
+                                            </div>
+                                            <div class="col-md-6 mt-1" id="results">
+                                         
+                                            </div>
+                                        </div>
+                                        <br />
+                                        <div class="row">
+                                            <button type="button" class="btn btn-primary" 
+                                                onclick="take_snapshot()">Take photo</button>
+                                        </div>
+                                    </div>
+
                                 </div>
 
-                                <div class="col-md-6 ">
-                                    <input type="text" class="form-control" name="id" placeholder="Your ID"
-                                        required>
+                                <div class="col-lg-4">
+                                    <div class="container">
+                                        <div class="row">
+
+                                            <div class="col-md-12 mt-2">
+                                                <input type="text" name="name" id="sname" class="form-control"
+                                                    placeholder="Your Name" required>
+                                            </div>
+
+                                            <div class="col-md-12 mt-2">
+                                                <input type="text" class="form-control" id="sid" name="id"
+                                                    placeholder="Your ID" required>
+                                            </div>
+
+                                            <div class="col-md-12 mt-2">
+                                                <input type="text" class="form-control" id="sdepartment"
+                                                    name="depertment" placeholder="Your Department" required>
+                                            </div>
+
+                                            <div class="col-md-12 mt-2">
+                                                <input type="text" class="form-control" id="sschool" name="school"
+                                                    placeholder="Your school" required>
+                                            </div>
+
+                                            <div class="col-md-12 text-center mt-2">
+
+                                                <div class="sent-message" id="addsuccess">Success: added user to database</div>
+                                                <div class="error-message" id="adderror">Failed: could not add user to database</div>
+
+                                                <button type="submit">Submit User</button>
+                                            </div>
+                                        </div>
+                                    </div>
+
                                 </div>
-
-                                <div class="col-md-12">
-                                    <input type="text" class="form-control" name="depertment" placeholder="Your Department"
-                                        required>
-                                </div>
-
-                                <div class="col-md-12">
-                                    <input type="text" class="form-control" name="school" placeholder="Your school"
-                                        required>
-                                </div>
-
-                                <div class="col-md-12 text-center">
-                                    <div class="loading">Loading</div>
-                                    <div class="error-message"></div>
-                                    <div class="sent-message">Your message has been sent. Thank you!</div>
-
-                                    <button type="submit">Submit User</button>
-                                </div>
-
                             </div>
-                        </form>
-
-                    </div>
+                        </div>
+                    </form>
 
                 </div>
+
+
 
             </div>
 
@@ -135,7 +158,6 @@
     <!-- Vendor JS Files -->
     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.js"></script>
     <script src="assets/vendor/aos/aos.js"></script>
-    <script src="assets/vendor/php-email-form/validate.js"></script>
     <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
     <script src="assets/vendor/purecounter/purecounter.js"></script>
     <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
@@ -143,7 +165,9 @@
 
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
-    <script src="assets/js/newUser.js"></script>
+    <script src="scripts/newuser.js"></script>
+
+
 
 </body>
 

@@ -15,7 +15,9 @@
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -34,12 +36,14 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+  <script type="text/javascript" src="eel.js"></script>
+
 </head>
 
-<body>
+<body onload="startAnalysis()" onbeforeunload="stopAnalysis()">
 
-<!-- ======= Header ======= -->
-<header id="header" class="header fixed-top">
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top">
     <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
 
       <a href="index.html" class="logo d-flex align-items-center">
@@ -52,7 +56,7 @@
           <li><a class="nav-link scrollto active" href="/index.html">Home</a></li>
           <li><a class="nav-link scrollto" href="/new.html">New user</a></li>
           <li><a class="nav-link scrollto" href="/admin.html">Admin</a></li>
-         
+
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -60,39 +64,30 @@
     </div>
   </header><!-- End Header -->
 
-  
+
 
   <main id="main">
     <!-- ======= About Section ======= -->
     <section id="about" class="about">
-
+      <br></br>
+      <br></br>
       <div class="container" data-aos="fade-up">
         <div class="row gx-0">
 
           <div class="col-lg-6 d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="200">
-            <div class="content d-flex align-items-center justify-content-center">
-                <div class="content">
-                    <h3>SMUNBE1721</h3>
-                    <h2>Muna Bedan</h2>
-                    <p>Software Engineering</p>
-                </div>
-              
+            <div class="content d-flex align-items-center justify-content-center" id="userData">
 
-              <div class="text-center text-lg-start">
-                <a href="#" class="btn-read-more d-inline-flex align-items-center justify-content-center align-self-center">
-                  <span>Access Granted</span>
-                  <i class="bi bi-check2-square"></i>
-                </a>
+              <div id="spinnerHolder">
+                <div class="spinner-border text-primary" id="spinner" role="status">
+                  <span class="visually-hidden">Loading...</span>
+                </div>
               </div>
 
-              <!--<div class="spinner-border text-primary" role="status">
-                <span class="visually-hidden">Loading...</span>
-              </div>--->
             </div>
           </div>
 
-          <div class="col-lg-6 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="200">
-            <img src="assets/img/about.jpg" class="img-fluid" alt="">
+          <div class="col-lg-6 d-flex align-items-center " data-aos="zoom-out" data-aos-delay="200">
+            <img id="videoElement" class="img-fluid" alt="">
           </div>
 
         </div>
@@ -100,17 +95,18 @@
 
     </section><!-- End About Section -->
 
-    
 
 
-   
-    
+
+
+
 
   </main><!-- End #main -->
 
- 
 
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.js"></script>
@@ -123,6 +119,7 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script src="scripts/biometric.js"></script>
 
 </body>
 
