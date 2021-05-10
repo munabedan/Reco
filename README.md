@@ -16,7 +16,11 @@ cd Reco
 ```bash
 pip install -r requirements.txt
 ```
-4. On windows make sure you [install the C compiler ](https://docs.microsoft.com/en-us/cpp/build/vscpp-step-0-installation?view=msvc-160) with the core workload
+## Dependecies
+
+1. On windows make sure you [install the C compiler ](https://docs.microsoft.com/en-us/cpp/build/vscpp-step-0-installation?view=msvc-160) with the core workload
+
+2. Also install the latest version of [mongoDB](https://www.mongodb.com/try/download/community) which is the database that reco uses
 
 ## Usage
 
