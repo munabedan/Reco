@@ -2,16 +2,20 @@ import pymongo
 import eel
 from bson.binary import Binary
 import pickle
-
-
+import configparser
 
 # create a database connection
 def connectToDB():
     print("connecting to database")
-    myclient = pymongo.MongoClient("mongodb://localhost:27017/")
-    mydb = myclient["reco"]
+    
+    config = configparser.ConfigParser()
+    config.read('DB.ini')
+    
+        
+    myclient = pymongo.MongoClient(config['database']['dbserver'])
+    mydb = myclient[config['database']['db']]
     global DBCollection
-    DBCollection= mydb["StudentDetails"]
+    DBCollection= mydb[config['database']['dbcollection']]
 
 
 
